@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jony Ghosh — Software Developer</title>
+  <meta name="description" content="Portfolio of Jony Ghosh — Software Developer (Odoo, Python, JavaScript)." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1320; --muted:#9aa4b2; --accent:#06b6d4; --glass:rgba(255,255,255,0.03);
+      --max-w:1100px; --radius:14px; --gap:20px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Helvetica,Arial; background:linear-gradient(180deg,#07101a 0%, #081827 60%); color:#e6eef6; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      line-height:1.5; padding:32px 16px;
+    }
+    .wrap{max-width:var(--max-w); margin:0 auto}
+    header{display:flex;gap:16px;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;gap:16px;align-items:center}
+    .avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#4f46e5);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:26px;color:#021018}
+    h1{margin:0;font-size:28px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+    nav a:hover{color:var(--accent)}
+
+    main{display:grid;grid-template-columns:1fr 360px;gap:var(--gap)}
+    @media (max-width:980px){main{grid-template-columns:1fr} .right{order:2}}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:var(--radius); padding:20px; box-shadow:0 6px 30px rgba(2,6,23,0.6);}
+    .hero{display:flex;gap:18px;align-items:flex-start}
+    .hero .info{flex:1}
+    .hero h2{margin:0 0 6px;font-size:22px}
+    .hero .role{color:var(--accent);font-weight:600}
+    .cta{margin-top:12px;display:flex;gap:12px}
+    .btn{background:var(--accent);color:#021018;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    .outline{border:1px solid rgba(255,255,255,0.06);padding:10px 12px;border-radius:10px;color:var(--muted);text-decoration:none}
+
+    section+section{margin-top:18px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:var(--glass);padding:8px 10px;border-radius:10px;color:var(--muted);font-weight:600}
+
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    @media (max-width:760px){.projects{grid-template-columns:1fr}}
+    .project{padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02)}
+    .project h3{margin:0 0 6px;font-size:16px}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+    .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02);color:var(--muted)}
+
+    .experience .item{margin-bottom:12px}
+    .education .row{display:flex;justify-content:space-between;gap:10px}
+
+    .contact-list{display:flex;flex-direction:column;gap:8px}
+    .contact-item{display:flex;gap:10px;align-items:center}
+    .muted{color:var(--muted)}
+
+    footer{margin-top:26px;color:var(--muted);text-align:center}
+
+    /* small helpers */
+    .right{position:sticky;top:32px}
+    .download{display:inline-block;margin-top:12px}
+
+    /* simple lightbox */
+    .modal{position:fixed;inset:0;background:rgba(2,6,23,0.7);display:flex;align-items:center;justify-content:center;padding:20px;visibility:hidden;opacity:0;transition:all .18s}
+    .modal.open{visibility:visible;opacity:1}
+    .modal .box{max-width:880px;width:100%;background:#071826;padding:18px;border-radius:12px}
+    .close{float:right;opacity:0.8}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="avatar">JG</div>
+        <div>
+          <h1>Jony Ghosh</h1>
+          <p class="lead">Software Developer — Odoo, Python, JavaScript · Machine Learning enthusiast</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <div>
+        <section class="card hero" id="about">
+          <div class="info">
+            <h2>Hello — I'm <span class="role">Jony Ghosh</span></h2>
+            <p class="muted">A Software Developer (B.Tech in CSE, specialization in AI) building Odoo apps and machine-learning solutions. Experienced in Python, JavaScript, HTML/CSS, and data science tools. Passionate about clean engineering and solving real problems.</p>
+            <div class="cta">
+              <a class="btn" href="#projects">See Projects</a>
+              <a class="outline" href="#contact">Get in touch</a>
+              <a class="outline download" href="CV_of_Jony_Ghosh.pdf" download>Download CV</a>
+            </div>
+
+            <section style="margin-top:14px">
+              <h4 style="margin:0 0 8px">Skills</h4>
+              <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">Odoo</span>
+                <span class="skill">HTML & CSS</span>
+                <span class="skill">Machine Learning</span>
+                <span class="skill">OpenCV</span>
+                <span class="skill">NLTK</span>
+                <span class="skill">Git</span>
+                <span class="skill">Linux</span>
+              </div>
+            </section>
+
+          </div>
+          <aside style="width:220px;text-align:center">
+            <div style="background:linear-gradient(135deg,#0ea5a4,#7c3aed);height:160px;border-radius:12px;padding:12px;display:flex;flex-direction:column;justify-content:center">
+              <strong style="font-size:20px">Metamorphosis Ltd.</strong>
+              <div class="muted" style="font-size:13px;margin-top:6px">Software Developer — Nov 2022 – Present</div>
+            </div>
+          </aside>
+        </section>
+
+        <section id="projects" class="card projects" aria-label="Projects">
+          <div class="project">
+            <h3>Automate detection of Different sentiments</h3>
+            <p class="muted">API + NLP pipeline to analyze WhatsApp chat exports per-message and overall sentiment. Publication available.</p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">NLP</span>
+              <span class="tag">NLTK</span>
+              <a class="tag" href="https://www.ijariit.com/manuscript/automate-detection-of-different-sentiments/" target="_blank">Publication</a>
+            </div>
+          </div>
+
+          <div class="project">
+            <h3>Face Recognition — Novel Deep Learning</h3>
+            <p class="muted">College project on face recognition using a custom deep-learning approach and OpenCV-based pipeline.</p>
+            <div class="tags">
+              <span class="tag">Deep Learning</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">Computer Vision</span>
+            </div>
+          </div>
+
+          <!-- sample placeholders if you want to add more projects -->
+          <div class="project">
+            <h3>Odoo Apps & Integrations</h3>
+            <p class="muted">Multiple Odoo modules built for clients — front-end + business logic using Python, JS and XML templates.</p>
+            <div class="tags"><span class="tag">Odoo</span><span class="tag">Python</span><span class="tag">XML</span></div>
+          </div>
+
+          <div class="project">
+            <h3>Data Science & Utilities</h3>
+            <p class="muted">Small tools and scripts for data cleaning, analysis, and visualization using Pandas and Matplotlib.</p>
+            <div class="tags"><span class="tag">Pandas</span><span class="tag">Matplotlib</span></div>
+          </div>
+        </section>
+
+        <section class="card experience" id="experience">
+          <h3 style="margin-top:0">Experience</h3>
+          <div class="item">
+            <strong>Software Developer — Metamorphosis Ltd.</strong>
+            <div class="muted">November 2022 – Present</div>
+            <ul style="margin:8px 0 0 18px;color:var(--muted)">
+              <li>Engineered Odoo applications using Python, JS, XML and CSS.</li>
+              <li>Gathered requirements and prepared specification documents with stakeholders.</li>
+              <li>Designed, planned and developed client solutions.</li>
+            </ul>
+          </div>
+
+          <section style="margin-top:10px">
+            <h4 style="margin:0 0 8px">Education</h4>
+            <div class="card" style="padding:12px">
+              <div class="row education">
+                <div>
+                  <strong>B.Tech — CSE (AI specialization)</strong>
+                  <div class="muted">Jain University, Bangalore — 2022</div>
+                </div>
+                <div style="text-align:right">
+                  <div class="muted">GPA: 7.56 / 10</div>
+                </div>
+              </div>
+
+              <div style="margin-top:8px">
+                <div><strong>HSC</strong> — Khulna Public College (2017) — GPA: 4.42 / 5.00</div>
+                <div><strong>SSC</strong> — Nalta High School (2015) — GPA: 5.00 / 5.00</div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+      </div>
+
+      <aside class="right">
+        <div class="card" id="contact">
+          <h3 style="margin-top:0">Contact</h3>
+          <div class="contact-list">
+            <div class="contact-item"><strong>Email:</strong><a class="muted" href="mailto:jony.ghosh98@gmail.com"> jony.ghosh98@gmail.com</a></div>
+            <div class="contact-item"><strong>Phone:</strong><span class="muted"> +8801715157359</span></div>
+            <div class="contact-item"><strong>LinkedIn:</strong><a class="muted" href="https://www.linkedin.com/in/jony-ghosh-78825720b/" target="_blank"> jony-ghosh</a></div>
+            <div class="contact-item"><strong>GitHub:</strong><a class="muted" href="https://github.com/Jonyghosh07" target="_blank"> Jonyghosh07</a></div>
+          </div>
+
+          <div style="margin-top:12px">
+            <h4 style="margin:6px 0">References</h4>
+            <div class="muted" style="font-size:14px">
+              Dr. K Janaki — k.janaki@jainuniversity.ac.in<br>
+              Abani Sarker — abani.sarker@robi.com.bd
+            </div>
+          </div>
+        </div>
+
+        <div style="height:18px"></div>
+
+        <div class="card">
+          <h4 style="margin:0">Quick Links</h4>
+          <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+            <a class="outline" href="#projects">Projects</a>
+            <a class="outline" href="#experience">Experience</a>
+            <a class="outline" href="#contact">Contact</a>
+          </div>
+        </div>
+
+      </aside>
+    </main>
+
+    <footer>
+      <div class="muted">Built from the information on your CV.</div>
+      <div class="muted" style="margin-top:4px">© <span id="year"></span> Jony Ghosh</div>
+    </footer>
+  </div>
+
+  <div id="modal" class="modal" role="dialog" aria-hidden="true">
+    <div class="box">
+      <button onclick="closeModal()" class="close">Close ✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // simple modal to show project details (expandable)
+    function openModal(html){document.getElementById('modal-content').innerHTML=html;document.getElementById('modal').classList.add('open');document.getElementById('modal').setAttribute('aria-hidden','false')}
+    function closeModal(){document.getElementById('modal').classList.remove('open');document.getElementById('modal').setAttribute('aria-hidden','true')}
+
+    // keyboard escape
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal()})
+
+    // smooth scroll for header nav
+    document.querySelectorAll('nav a, .outline, .btn').forEach(a=>a.addEventListener('click',function(ev){
+      const href=this.getAttribute('href'); if(!href.startsWith('#'))return; ev.preventDefault(); document.querySelector(href).scrollIntoView({behavior:'smooth',block:'start'});
+    }));
+
+    // Accessibility: focus trap simple
+    document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)closeModal()})
+  </script>
+</body>
+</html>
